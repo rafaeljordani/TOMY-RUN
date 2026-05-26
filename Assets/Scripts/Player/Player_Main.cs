@@ -55,7 +55,7 @@ public class Player_Main : MonoBehaviour
 
     public void Pulo()
     {
-        if ((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.W)) && (OnFloor == true)) 
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && (OnFloor == true)) 
         {
             Rgdb2D.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
             // Aqui ele adiciona forca ao pulo mas apenas a eixo Y e o forcemode2d é para o objeto ser mais interagivel com massa e gravidade
