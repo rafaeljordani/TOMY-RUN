@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hubs/Menu.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Gaming.unity
+    guid: 1b1a701cfdd4547458ddea561c663a95
+  - enabled: 1
+    path: Assets/Scenes/Hubs/Tela de Saves.unity
+    guid: d010bfa24db7b8e42b10dab3f36ba45c
+  - enabled: 1
+    path: Assets/Scenes/Hubs/Config.unity
+    guid: 800d34757cf0a4847864c24d4c1f0448
+  - enabled: 1
+    path: Assets/Scenes/MineGames/InfinitRun.unity
+    guid: 15544f5df9a099e46aed1d3624305cb8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
