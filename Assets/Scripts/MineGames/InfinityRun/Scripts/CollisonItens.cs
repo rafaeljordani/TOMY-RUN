@@ -1,11 +1,7 @@
 using UnityEngine;
 
-public class Spawners : MonoBehaviour
+public class CollisonItens : MonoBehaviour
 {
-    public GameObject spawner, Maca,Cenoura,Banana; // Bons
-    public GameObject Pirulito, Chips; //Ruim
-    public GameObject Chocolate; //Bost 
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,5 +13,12 @@ public class Spawners : MonoBehaviour
     {
         
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
