@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -7,13 +8,14 @@ public class Spawners : MonoBehaviour
     public GameObject Pirulito, Chips; //Ruim
     public GameObject Chocolate; //Bost 
 
+    public List<GameObject> ItensColetaveis; //lista para poder aleatorizar o spawn de objetos
     public GameObject spawners;
-
     public float VelSpawn;
+    public int NumItem;
+
+
 
     
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         float NumAleatorio = Random.Range(2.0f, 8.0f);
@@ -21,9 +23,11 @@ public class Spawners : MonoBehaviour
         Debug.Log(NumAleatorio);
 
         Invoke("InvocarAlgo", NumAleatorio);
+
+        
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
         
@@ -32,12 +36,22 @@ public class Spawners : MonoBehaviour
 
     public void InvocarAlgo()
     {
-        GameObject Sla = Instantiate(Maca,spawners.transform.position,Quaternion.identity);
-        Rigidbody2D RdbgSpawn = Sla.GetComponent<Rigidbody2D>();
+
+        NumItem = Random.Range(0, ItensColetaveis.Count);
+        //Sistema de spawn aleatorio de obejto 
+
+        GameObject Item = Instantiate(ItensColetaveis[NumItem], spawners.transform.position,Quaternion.identity);
+        //aqui ele da spawn no objeto
+
+        Rigidbody2D RdbgSpawn = Item.GetComponent<Rigidbody2D>();
         RdbgSpawn.linearVelocityX = -20; 
+        //aqui manda ele para a direcao proposta 
+
         float NumAleatorio = Random.Range(2.0f, 8.0f);
         Invoke("InvocarAlgo", NumAleatorio);
-        Destroy(Sla,5f);
+        //sistema de aleatorizar o spawm
+
+        Destroy(Item,5f);
     }
 
     

@@ -150,13 +150,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawners
   Maca: {fileID: 4607359880588044245, guid: 62de48c008d0783489696a02debea4de, type: 3}
-  Cenoura: {fileID: 0}
-  Banana: {fileID: 0}
-  Pirulito: {fileID: 0}
-  Chips: {fileID: 0}
-  Chocolate: {fileID: 0}
+  Cenoura: {fileID: 5553489777495041553, guid: 4d819832f21a9264cac2a73d0b1875c5, type: 3}
+  Banana: {fileID: 6188276808087009246, guid: 8782f0f1554e3924d9f69711414c81a2, type: 3}
+  Pirulito: {fileID: 9133124059491181023, guid: e16e733cbe317394e9d0767efb4b06e2, type: 3}
+  Chips: {fileID: 5643734335423199109, guid: 64c9474319eec5442b4610c17759e3c7, type: 3}
+  Chocolate: {fileID: 5415868159499425352, guid: 1de86b9c8d07001479e35111d6474229, type: 3}
+  ItensColetaveis:
+  - {fileID: 6188276808087009246, guid: 8782f0f1554e3924d9f69711414c81a2, type: 3}
+  - {fileID: 5553489777495041553, guid: 4d819832f21a9264cac2a73d0b1875c5, type: 3}
+  - {fileID: 5643734335423199109, guid: 64c9474319eec5442b4610c17759e3c7, type: 3}
+  - {fileID: 5415868159499425352, guid: 1de86b9c8d07001479e35111d6474229, type: 3}
+  - {fileID: 4607359880588044245, guid: 62de48c008d0783489696a02debea4de, type: 3}
+  - {fileID: 9133124059491181023, guid: e16e733cbe317394e9d0767efb4b06e2, type: 3}
   spawners: {fileID: 319769183}
   VelSpawn: 0
+  NumItem: 0
 --- !u!212 &319769185
 SpriteRenderer:
   serializedVersion: 2
@@ -336,13 +344,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawners
   Maca: {fileID: 4607359880588044245, guid: 62de48c008d0783489696a02debea4de, type: 3}
-  Cenoura: {fileID: 0}
-  Banana: {fileID: 0}
-  Pirulito: {fileID: 0}
-  Chips: {fileID: 0}
-  Chocolate: {fileID: 0}
+  Cenoura: {fileID: 5553489777495041553, guid: 4d819832f21a9264cac2a73d0b1875c5, type: 3}
+  Banana: {fileID: 6188276808087009246, guid: 8782f0f1554e3924d9f69711414c81a2, type: 3}
+  Pirulito: {fileID: 9133124059491181023, guid: e16e733cbe317394e9d0767efb4b06e2, type: 3}
+  Chips: {fileID: 5643734335423199109, guid: 64c9474319eec5442b4610c17759e3c7, type: 3}
+  Chocolate: {fileID: 5415868159499425352, guid: 1de86b9c8d07001479e35111d6474229, type: 3}
+  ItensColetaveis:
+  - {fileID: 6188276808087009246, guid: 8782f0f1554e3924d9f69711414c81a2, type: 3}
+  - {fileID: 5553489777495041553, guid: 4d819832f21a9264cac2a73d0b1875c5, type: 3}
+  - {fileID: 5643734335423199109, guid: 64c9474319eec5442b4610c17759e3c7, type: 3}
+  - {fileID: 5415868159499425352, guid: 1de86b9c8d07001479e35111d6474229, type: 3}
+  - {fileID: 4607359880588044245, guid: 62de48c008d0783489696a02debea4de, type: 3}
+  - {fileID: 9133124059491181023, guid: e16e733cbe317394e9d0767efb4b06e2, type: 3}
   spawners: {fileID: 395536449}
   VelSpawn: 0
+  NumItem: 0
 --- !u!1 &644994937
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,13 +620,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawners
   Maca: {fileID: 4607359880588044245, guid: 62de48c008d0783489696a02debea4de, type: 3}
-  Cenoura: {fileID: 0}
-  Banana: {fileID: 0}
-  Pirulito: {fileID: 0}
-  Chips: {fileID: 0}
-  Chocolate: {fileID: 0}
+  Cenoura: {fileID: 5553489777495041553, guid: 4d819832f21a9264cac2a73d0b1875c5, type: 3}
+  Banana: {fileID: 6188276808087009246, guid: 8782f0f1554e3924d9f69711414c81a2, type: 3}
+  Pirulito: {fileID: 9133124059491181023, guid: e16e733cbe317394e9d0767efb4b06e2, type: 3}
+  Chips: {fileID: 5643734335423199109, guid: 64c9474319eec5442b4610c17759e3c7, type: 3}
+  Chocolate: {fileID: 5415868159499425352, guid: 1de86b9c8d07001479e35111d6474229, type: 3}
+  ItensColetaveis:
+  - {fileID: 6188276808087009246, guid: 8782f0f1554e3924d9f69711414c81a2, type: 3}
+  - {fileID: 5553489777495041553, guid: 4d819832f21a9264cac2a73d0b1875c5, type: 3}
+  - {fileID: 5643734335423199109, guid: 64c9474319eec5442b4610c17759e3c7, type: 3}
+  - {fileID: 5415868159499425352, guid: 1de86b9c8d07001479e35111d6474229, type: 3}
+  - {fileID: 4607359880588044245, guid: 62de48c008d0783489696a02debea4de, type: 3}
+  - {fileID: 9133124059491181023, guid: e16e733cbe317394e9d0767efb4b06e2, type: 3}
   spawners: {fileID: 1300017815}
   VelSpawn: 0
+  NumItem: 0
 --- !u!212 &1300017817
 SpriteRenderer:
   serializedVersion: 2
@@ -781,13 +805,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spawners
   Maca: {fileID: 4607359880588044245, guid: 62de48c008d0783489696a02debea4de, type: 3}
-  Cenoura: {fileID: 0}
-  Banana: {fileID: 0}
-  Pirulito: {fileID: 0}
-  Chips: {fileID: 0}
-  Chocolate: {fileID: 0}
+  Cenoura: {fileID: 5553489777495041553, guid: 4d819832f21a9264cac2a73d0b1875c5, type: 3}
+  Banana: {fileID: 6188276808087009246, guid: 8782f0f1554e3924d9f69711414c81a2, type: 3}
+  Pirulito: {fileID: 9133124059491181023, guid: e16e733cbe317394e9d0767efb4b06e2, type: 3}
+  Chips: {fileID: 5643734335423199109, guid: 64c9474319eec5442b4610c17759e3c7, type: 3}
+  Chocolate: {fileID: 5415868159499425352, guid: 1de86b9c8d07001479e35111d6474229, type: 3}
+  ItensColetaveis:
+  - {fileID: 6188276808087009246, guid: 8782f0f1554e3924d9f69711414c81a2, type: 3}
+  - {fileID: 5553489777495041553, guid: 4d819832f21a9264cac2a73d0b1875c5, type: 3}
+  - {fileID: 5643734335423199109, guid: 64c9474319eec5442b4610c17759e3c7, type: 3}
+  - {fileID: 5415868159499425352, guid: 1de86b9c8d07001479e35111d6474229, type: 3}
+  - {fileID: 4607359880588044245, guid: 62de48c008d0783489696a02debea4de, type: 3}
+  - {fileID: 9133124059491181023, guid: e16e733cbe317394e9d0767efb4b06e2, type: 3}
   spawners: {fileID: 2027997666}
   VelSpawn: 0
+  NumItem: 0
 --- !u!212 &2027997668
 SpriteRenderer:
   serializedVersion: 2
