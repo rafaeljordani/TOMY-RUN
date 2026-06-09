@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3517816574496454221}
   - component: {fileID: 4607719798340010604}
   - component: {fileID: 4356962497470552617}
-  - component: {fileID: 3374793805029817551}
+  - component: {fileID: -3646309792335205632}
   m_Layer: 0
   m_Name: Chocolate
-  m_TagString: Untagged
+  m_TagString: ItensInfinntyRunning
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,7 +167,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &3374793805029817551
+--- !u!114 &-3646309792335205632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,7 +176,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5415868159499425352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a1c2f1a969434149a0a181dc8894849, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f19bd89ce3cfca469b1251a1f7f4198, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CollisonItens
-  Dano: 50
+  m_EditorClassIdentifier: Assembly-CSharp::MainIten
+  boost: 0
+  dano: 1
+  mainGame: {fileID: 0}

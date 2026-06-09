@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3855551238015374469}
   - component: {fileID: 4491918684924462865}
   - component: {fileID: 263505533460584113}
-  - component: {fileID: 4475175938005288156}
+  - component: {fileID: -3904705605640640907}
   m_Layer: 0
   m_Name: Banana
-  m_TagString: Untagged
+  m_TagString: ItensInfinntyRunning
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,7 +167,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4475175938005288156
+--- !u!114 &-3904705605640640907
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,6 +176,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6188276808087009246}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a1c2f1a969434149a0a181dc8894849, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f19bd89ce3cfca469b1251a1f7f4198, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CollisonItens
+  m_EditorClassIdentifier: Assembly-CSharp::MainIten
+  boost: 30
+  dano: 0
+  mainGame: {fileID: 0}
