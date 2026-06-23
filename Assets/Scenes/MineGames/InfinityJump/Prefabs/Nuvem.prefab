@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 925986852173157056}
   - component: {fileID: 5449362480630979637}
-  - component: {fileID: 2081765876234291910}
+  - component: {fileID: 8224957610042927380}
   m_Layer: 0
   m_Name: Nuvem
   m_TagString: NuvemInfinntyJump
@@ -92,8 +92,8 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!70 &2081765876234291910
-CapsuleCollider2D:
+--- !u!68 &8224957610042927380
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -127,5 +127,19 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.0000002, y: 2.0000005}
-  m_Direction: 0
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.083437994, y: -0.99629235}
+  - {x: 0.23934647, y: -0.94427454}
+  - {x: 0.3612088, y: -0.8497571}
+  - {x: 0.4595492, y: -0.7120375}
+  - {x: 0.49358884, y: -0.60233986}
+  - {x: 0.5150312, y: 0.17441352}
+  - {x: 0.5245019, y: 0.50996166}
+  - {x: 0.4603722, y: 0.7360706}
+  - {x: 0.31937668, y: 0.90161794}
+  - {x: 0.14094746, y: 0.98402685}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0

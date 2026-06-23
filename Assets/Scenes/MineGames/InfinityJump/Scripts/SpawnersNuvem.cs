@@ -5,26 +5,37 @@ using UnityEngine;
 public class SpawnersNuvem : MonoBehaviour
 {
     public GameObject NuvemPrefab;
-    List<GameObject> NuvemList;
+    public List<GameObject> NuvemList;
 
-    int RandoNuvem;
+    public int RandoNuvem, NuvensExistem;
 
 
 
     void Start()
     {
-        RandoNuvem = Random.Range(0, NuvemList.Count);
-        GameObject sla = NuvemList[RandoNuvem];
+        
+        //GameObject sla = NuvemList[RandoNuvem];
     }
-
+    
     
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if ((Input.GetKeyUp(KeyCode.Space)) && (NuvensExistem <= 2))
         {
-            Instantiate(NuvemPrefab, , NuvemPrefab.transform.rotation);
+            SpawnNuvem();
         }
     }
 
-    
+
+    public void SpawnNuvem()
+    {
+        if (NuvensExistem <= 2)
+        {
+            Debug.Log("Spawnou Nuvem");
+            RandoNuvem = Random.Range(0,NuvemList.Count - 1);
+            Instantiate(NuvemPrefab, NuvemList[RandoNuvem].transform.position, NuvemPrefab.transform.rotation);
+            NuvensExistem += 1;
+        }
+    }
+
 }

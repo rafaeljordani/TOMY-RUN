@@ -49,7 +49,7 @@ public class MainPlayerInfnityJump : MonoBehaviour
 
     public void CameraMov()
     {
-        Camera.transform.position = new Vector3(0, this.gameObject.transform.position.y, -10);
+        Camera.transform.position = new Vector3(0, this.gameObject.transform.position.y + 3, -10);
         //Isso faz com que a camera siga o personagem no eixo X e nao saia do eixo Y que sempre vai ser fixo em 0 
     }
 
