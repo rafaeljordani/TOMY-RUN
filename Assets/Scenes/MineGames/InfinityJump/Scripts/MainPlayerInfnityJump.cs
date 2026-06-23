@@ -7,9 +7,10 @@ public class MainPlayerInfnityJump : MonoBehaviour
     public Vector2 Dir;
     public GameObject Camera;
     public bool OnFloor;
+    public int pontuacaoMax;
     void Start()
     {
-
+        InvokeRepeating("Pontuacao", 5f, 1f);
     }
 
     // Update is called once per frame
@@ -55,10 +56,32 @@ public class MainPlayerInfnityJump : MonoBehaviour
 
     public void Pulo()
     {
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && (OnFloor == true))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
         {
-            Rgdb2D.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
-            // Aqui ele adiciona forca ao pulo mas apenas a eixo Y e o forcemode2d é para o objeto ser mais interagivel com massa e gravidade
+            if (OnFloor == true)
+            {
+                Debug.Log("Pulo");
+                Rgdb2D.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+                // Aqui ele adiciona forca ao pulo mas apenas a eixo Y e o forcemode2d é para o objeto ser mais interagivel com massa e gravidade
+                OnFloor = false;
+                //lembra de colocar o OnFloor = false para que o jogador não consiga pular duplo
+               
+            }
+
         }
+    }
+
+    public void Pontuacao()
+    {
+     float pontuacaoFloat = this.transform.position.y;
+        int pontuacaoInt = Mathf.RoundToInt(pontuacaoFloat);
+        //isso aqui é para aredondar o valor da pontuação para um inteiro e não ficar com valores quebrados
+        
+        if (pontuacaoMax < pontuacaoInt)
+        {
+            pontuacaoMax = pontuacaoInt;
+        }
+        // aqui é para salvar a pontuação máxima do jogador e não deixar ela diminuir caso o jogador caia de uma plataforma ou algo do tipo
+        Debug.Log("Pontuação: " + pontuacaoMax);   
     }
 }
