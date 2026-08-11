@@ -27,8 +27,6 @@ public class Player_Main : MonoBehaviour
         //Mov da camera
         Pulo();
         //Pulo do pernagem 
-
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -55,10 +53,18 @@ public class Player_Main : MonoBehaviour
 
     public void Pulo()
     {
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && (OnFloor == true)) 
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
         {
-            Rgdb2D.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
-            // Aqui ele adiciona forca ao pulo mas apenas a eixo Y e o forcemode2d é para o objeto ser mais interagivel com massa e gravidade
+            if (OnFloor == true)
+            {
+                Debug.Log("Pulo");
+                Rgdb2D.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+                // Aqui ele adiciona forca ao pulo mas apenas a eixo Y e o forcemode2d é para o objeto ser mais interagivel com massa e gravidade
+                OnFloor = false;
+                //lembra de colocar o OnFloor = false para que o jogador não consiga pular duplo
+
+            }
+
         }
     }
 }

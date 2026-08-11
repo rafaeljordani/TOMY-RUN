@@ -26,20 +26,23 @@ public class PlayerScriptInfinityRunning : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("ItensInfinntyRunning"))
+        {
+            collision.gameObject.GetComponent<MainIten>().ControlerBoostAndVida();
+            //pegar a função do obejeto que colidio e chamar essa função
+
+            Destroy(collision.gameObject);
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
             OnFloor = true;
             //para ver se esta no chao ou nao 
-        }
-
-        if (collision.gameObject.CompareTag("ItensInfinntyRunning"))
-        {
-            collision.gameObject.GetComponent<MainIten>().ControlerBoostAndVida();
-            //pegar a função do obejeto que colidio e chamar essa função
-            
-            Destroy(collision.gameObject);
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
