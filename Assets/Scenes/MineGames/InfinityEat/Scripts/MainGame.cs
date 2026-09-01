@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainGame : MonoBehaviour
 {
@@ -29,8 +30,8 @@ public class MainGame : MonoBehaviour
     {
         if ((estaminaController <= 0) || (vida <= 0))
         {
-            Application.Quit();
-            Debug.Log("morreu");
+           
+            SceneManager.LoadScene("Gaming");
         }
     }
 }

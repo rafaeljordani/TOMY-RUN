@@ -1,4 +1,6 @@
+using Unity.VectorGraphics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SistemaDeMorte : MonoBehaviour
 {
@@ -19,6 +21,7 @@ public class SistemaDeMorte : MonoBehaviour
         {
             Debug.Log("Player morreu");
             Destroy(collision.gameObject);
+            SceneManager.LoadScene("Gaming");
         }   
     }
 }
