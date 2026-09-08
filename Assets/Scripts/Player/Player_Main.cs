@@ -4,9 +4,11 @@ public class Player_Main : MonoBehaviour
 {
     public Rigidbody2D Rgdb2D;
     public float Vel, JumpForce;
-    public Vector2 Dir;
+    public Vector2 dir;
     public GameObject Camera;
     public bool OnFloor;
+    public Animator Anim;
+    public SpriteRenderer spriteRenderer;
     void Start()
     {
         
@@ -15,18 +17,20 @@ public class Player_Main : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Dir = new Vector2(Input.GetAxisRaw("Horizontal"),0);
+        dir = new Vector2(Input.GetAxisRaw("Horizontal"),0);
         //Aqui voce libera o persoangem so andar horizontal e deixando o eixo Y em 0 sempre
 
-        Rgdb2D.linearVelocity = new Vector2(Dir.x * Vel, Rgdb2D.linearVelocity.y);
+        Rgdb2D.linearVelocity = new Vector2(dir.x * Vel, Rgdb2D.linearVelocity.y);
         //Aqui voce adiciona a força de andar no Rg mas apenas no eixo X por que a logica precisa ser assim mantendo o eixo Y para o addforce fazer ele pular  
-
+        Debug.Log(dir.x);
 
 
         CameraMov();
         //Mov da camera
         Pulo();
         //Pulo do pernagem 
+        animWalk();
+        //Animação do personagem andando
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -67,4 +71,23 @@ public class Player_Main : MonoBehaviour
 
         }
     }
+
+    public void animWalk()
+    {
+        if (dir.x == 1)
+        {
+            Anim.SetBool("isWalk", true);
+            spriteRenderer.flipX = false;
+        }
+        else if(dir.x == -1) 
+        {
+            Anim.SetBool("isWalk", true);
+            spriteRenderer.flipX = true;
+        }
+        else
+        {
+            Anim.SetBool("isWalk", false);
+        }
+    }
+
 }
