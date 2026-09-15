@@ -49,6 +49,17 @@ public class Player_Main : MonoBehaviour
             OnFloor = false;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("ItensInfinntyRunning"))
+        {
+            collision.gameObject.GetComponent<MainIten>().ControlerBoostAndVida();
+            //pegar a função do obejeto que colidio e chamar essa função
+
+            Destroy(collision.gameObject);
+        }
+    }
+
     public void CameraMov()
     {
         Camera.transform.position = new Vector3(this.gameObject.transform.position.x, 0, -10);

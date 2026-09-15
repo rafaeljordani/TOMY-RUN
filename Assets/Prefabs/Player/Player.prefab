@@ -121,12 +121,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ab15297a9bcbf04884bd2c784966cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_Main
-  Rgdb2D: {fileID: 945993566077415423}
+  OnFloor: 0
   Vel: 5
   JumpForce: 5
   dir: {x: 0, y: 0}
+  Rgdb2D: {fileID: 945993566077415423}
   Camera: {fileID: 0}
-  OnFloor: 0
   Anim: {fileID: 9026151780303184163}
   spriteRenderer: {fileID: 6768457177947522705}
 --- !u!212 &6768457177947522705
@@ -198,7 +198,7 @@ Animator:
   m_GameObject: {fileID: 4429865292907206892}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 743bd06b85f1ff0429ca0a06755e00b5, type: 2}
+  m_Controller: {fileID: 9100000, guid: c7d1606f02de24a46822ad4822e25745, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
