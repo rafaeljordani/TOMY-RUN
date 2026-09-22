@@ -54,7 +54,7 @@ public class Player_Main : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("ItensInfinntyRunning"))
         {
-            Anim.SetBool("isEatFront", true);
+            setAnimEat();
             collision.gameObject.GetComponent<MainIten>().ControlerBoostAndVida();
             //pegar a função do obejeto que colidio e chamar essa função
             Destroy(collision.gameObject);
@@ -131,4 +131,16 @@ public class Player_Main : MonoBehaviour
     {
             Anim.SetBool("isEatFront", false);
     }
+    public void eatSides()
+    {
+        Anim.SetBool("isEatSides", false);
+    }
+
+    public void setAnimEat()
+    {
+        Anim.SetBool("isEatFront", true);
+        Anim.SetBool("isEatSides", true);
+    }
+
+
 }
