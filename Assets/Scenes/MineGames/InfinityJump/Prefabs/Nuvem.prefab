@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8224957610042927380}
   m_Layer: 0
   m_Name: Nuvem
-  m_TagString: NuvemInfinntyJump
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

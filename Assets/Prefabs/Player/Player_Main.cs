@@ -16,6 +16,7 @@ public class Player_Main : MonoBehaviour
 
     //Camera do personagem
     public GameObject Camera;
+    public bool infinityJump = false;
 
     //Animação do personagem
     public Animator Anim;
@@ -47,23 +48,30 @@ public class Player_Main : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor"))
         {
             OnFloor = false;
-        }
+        } 
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("ItensInfinntyRunning"))
         {
+            Anim.SetBool("isEatFront", true);
             collision.gameObject.GetComponent<MainIten>().ControlerBoostAndVida();
             //pegar a função do obejeto que colidio e chamar essa função
-
             Destroy(collision.gameObject);
         }
+
+            
     }
 
     public void CameraMov()
     {
-        Camera.transform.position = new Vector3(this.gameObject.transform.position.x, 0, -10);
-        //Isso faz com que a camera siga o personagem no eixo X e nao saia do eixo Y que sempre vai ser fixo em 0 
+        
+        if (infinityJump)
+        { 
+            Camera.transform.position = new Vector3(0, this.gameObject.transform.position.y, -10);
+        }
+        else Camera.transform.position = new Vector3(this.gameObject.transform.position.x, 0, -10);
+        //Isso faz com que a camera siga o personagem no eixo X e nao saia do eixo Y que sempre vai ser fixo em 0  
     }
     public void Mov()
     {
@@ -117,5 +125,10 @@ public class Player_Main : MonoBehaviour
         {
             Anim.SetBool("isJump", true);
         }
+    }
+
+    public void eatFront()
+    {
+            Anim.SetBool("isEatFront", false);
     }
 }

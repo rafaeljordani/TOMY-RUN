@@ -20,7 +20,7 @@ public class ControlerDeleteAndADD : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("NuvemInfinntyJump"))
+        if (collision.gameObject.CompareTag("Floor"))
         {
             Destroy(linha);
             limiteQueda = collision.gameObject.transform.position;
