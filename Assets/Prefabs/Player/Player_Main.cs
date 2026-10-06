@@ -66,15 +66,21 @@ public class Player_Main : MonoBehaviour
     public void CameraMov()
     {
         
-        if (infinityJump)
-        { 
-            Camera.transform.position = new Vector3(0, this.gameObject.transform.position.y, -10);
+        if(Camera == null)
+        {}
+        else
+        {
+            if (infinityJump)
+            {
+                Camera.transform.position = new Vector3(0, this.gameObject.transform.position.y, -10);
+            }
+            else Camera.transform.position = new Vector3(this.gameObject.transform.position.x, 0, -10);
+            //Isso faz com que a camera siga o personagem no eixo X e nao saia do eixo Y que sempre vai ser fixo em 0  
         }
-        else Camera.transform.position = new Vector3(this.gameObject.transform.position.x, 0, -10);
-        //Isso faz com que a camera siga o personagem no eixo X e nao saia do eixo Y que sempre vai ser fixo em 0  
     }
     public void Mov()
     {
+        
         dir = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
         //Aqui voce libera o persoangem so andar horizontal e deixando o eixo Y em 0 sempre
 

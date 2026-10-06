@@ -43,7 +43,8 @@ public class SpawnersInfintyRun : MonoBehaviour
         //aqui ele da spawn no objeto
 
         Rigidbody2D RdbgSpawn = Item.GetComponent<Rigidbody2D>();
-        RdbgSpawn.linearVelocityX = -20; 
+        RdbgSpawn.linearVelocityX = -20;
+        RdbgSpawn.constraints = RigidbodyConstraints2D.FreezePositionY;
         //aqui manda ele para a direcao proposta 
 
         float NumAleatorio = Random.Range(2.0f, 8.0f);

@@ -130,7 +130,7 @@ TextureImporter:
         width: 321
         height: 180
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -152,7 +152,7 @@ TextureImporter:
         width: 218
         height: 151
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -174,7 +174,7 @@ TextureImporter:
         width: 90
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,9 +191,9 @@ TextureImporter:
       name: pixilart-sprite (5)_3
       rect:
         serializedVersion: 2
-        x: 639
+        x: 959
         y: 0
-        width: 641
+        width: 321
         height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -209,11 +209,77 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: pixilart-sprite (5)_4
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 123
+        width: 144
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19cb62ddc6197514681be62d42da0f2d
+      internalID: 1847015963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-sprite (5)_5
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 74
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 2, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3ecab67e97ecc4189956e928354f87
+      internalID: 651581882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixilart-sprite (5)_6
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 6
+        width: 318
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f655aed50c3d964aa9e4a71eab4863d
+      internalID: -517584924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c82131f5262c195488a889c7aa00b2f0
     internalID: 0
     vertices: []
     indices: 
@@ -221,12 +287,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       pixilart-sprite (5)_0: -7364876344918923916
       pixilart-sprite (5)_1: -6467025860841578517
       pixilart-sprite (5)_2: 7915215398992673203
       pixilart-sprite (5)_3: -9161985646020519149
+      pixilart-sprite (5)_4: 1847015963
+      pixilart-sprite (5)_5: 651581882
+      pixilart-sprite (5)_6: -517584924
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
