@@ -86,7 +86,6 @@ public class Player_Main : MonoBehaviour
 
         Rgdb2D.linearVelocity = new Vector2(dir.x * Vel, Rgdb2D.linearVelocity.y);
         //Aqui voce adiciona a força de andar no Rg mas apenas no eixo X por que a logica precisa ser assim mantendo o eixo Y para o addforce fazer ele pular  
-        Debug.Log(dir.x);
     }
     public void Pulo()
     {
@@ -97,7 +96,7 @@ public class Player_Main : MonoBehaviour
                 Debug.Log("Pulo");
                 Rgdb2D.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
                 // Aqui ele adiciona forca ao pulo mas apenas a eixo Y e o forcemode2d é para o objeto ser mais interagivel com massa e gravidade
-                OnFloor = false;
+
                 //lembra de colocar o OnFloor = false para que o jogador não consiga pular duplo
 
             }
@@ -126,9 +125,11 @@ public class Player_Main : MonoBehaviour
         if (OnFloor)
         {
             Anim.SetBool("isJump", false);
+            Anim.SetBool("isJumpFinished", true);
         }
         else
         {
+            Anim.SetBool("isJumpFinished", false);
             Anim.SetBool("isJump", true);
         }
     }

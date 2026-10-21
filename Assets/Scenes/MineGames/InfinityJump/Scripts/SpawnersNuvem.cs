@@ -8,13 +8,13 @@ public class SpawnersNuvem : MonoBehaviour
     public List<GameObject> NuvemList;
 
     public int RandoNuvem, NuvensExistem;
+    public int suporte = 7;
 
 
 
     void Start()
     {
-        
-        //GameObject sla = NuvemList[RandoNuvem];
+
     }
     
     
@@ -29,10 +29,23 @@ public class SpawnersNuvem : MonoBehaviour
 
     public void SpawnNuvem()
     {
+        
+        int numAntigo = suporte;
+
+
         if (NuvensExistem <= 2)
         {
             Debug.Log("Spawnou Nuvem");
-            RandoNuvem = Random.Range(0,NuvemList.Count - 1);
+            RandoNuvem = Random.Range(0,4);
+            suporte = RandoNuvem;
+            if(numAntigo == suporte)
+            {
+                if(RandoNuvem == 0)
+                {
+                    RandoNuvem +=1;
+                }
+                RandoNuvem -= 1;
+            }
             Instantiate(NuvemPrefab, NuvemList[RandoNuvem].transform.position, NuvemPrefab.transform.rotation);
             NuvensExistem += 1;
         }
