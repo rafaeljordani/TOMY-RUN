@@ -951,6 +951,14 @@ PrefabInstance:
       propertyPath: OnFloor
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 106797061939612187, guid: e68273b0c198d91448a41b435a3c108e, type: 3}
+      propertyPath: canJump
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 106797061939612187, guid: e68273b0c198d91448a41b435a3c108e, type: 3}
+      propertyPath: canWalk
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4429865292907206892, guid: e68273b0c198d91448a41b435a3c108e, type: 3}
       propertyPath: m_Name
       value: Player

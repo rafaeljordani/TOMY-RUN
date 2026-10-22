@@ -4,6 +4,8 @@ public class Player_Main : MonoBehaviour
 {
     //Personagem geral
     public bool OnFloor;
+    public bool canJump;
+    public bool canWalk;
     //Variaveis boolianas do personagem 
 
     public float Vel;
@@ -21,6 +23,8 @@ public class Player_Main : MonoBehaviour
     //Animação do personagem
     public Animator Anim;
     public SpriteRenderer spriteRenderer;
+
+   
 
     void Update()
     {
@@ -80,27 +84,33 @@ public class Player_Main : MonoBehaviour
     }
     public void Mov()
     {
-        
+        if (canWalk)
+        {
         dir = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
         //Aqui voce libera o persoangem so andar horizontal e deixando o eixo Y em 0 sempre
 
         Rgdb2D.linearVelocity = new Vector2(dir.x * Vel, Rgdb2D.linearVelocity.y);
         //Aqui voce adiciona a força de andar no Rg mas apenas no eixo X por que a logica precisa ser assim mantendo o eixo Y para o addforce fazer ele pular  
+
+        }
     }
     public void Pulo()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
+        if (canJump!)
         {
-            if (OnFloor == true)
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
             {
-                Debug.Log("Pulo");
-                Rgdb2D.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
-                // Aqui ele adiciona forca ao pulo mas apenas a eixo Y e o forcemode2d é para o objeto ser mais interagivel com massa e gravidade
+                if (OnFloor == true)
+                {
+                    Debug.Log("Pulo");
+                    Rgdb2D.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+                    // Aqui ele adiciona forca ao pulo mas apenas a eixo Y e o forcemode2d é para o objeto ser mais interagivel com massa e gravidade
 
-                //lembra de colocar o OnFloor = false para que o jogador não consiga pular duplo
+                    //lembra de colocar o OnFloor = false para que o jogador não consiga pular duplo
+
+                }
 
             }
-
         }
     }
     public void animWalk()

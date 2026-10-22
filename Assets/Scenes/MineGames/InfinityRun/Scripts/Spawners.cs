@@ -46,8 +46,8 @@ public class SpawnersInfintyRun : MonoBehaviour
         RdbgSpawn.linearVelocityX = -20;
         RdbgSpawn.constraints = RigidbodyConstraints2D.FreezePositionY;
         //aqui manda ele para a direcao proposta 
-
-        float NumAleatorio = Random.Range(2.0f, 8.0f);
+        
+        float NumAleatorio = Random.Range(2.0f, 5.0f);
         Invoke("InvocarAlgo", NumAleatorio);
         //sistema de aleatorizar o spawm
 

@@ -1643,7 +1643,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 52
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6467025860841578517, guid: 68450b64cf850fb4b80eaf7ce2c39108, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1947,6 +1947,18 @@ PrefabInstance:
     - target: {fileID: 106797061939612187, guid: e68273b0c198d91448a41b435a3c108e, type: 3}
       propertyPath: Camera
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 106797061939612187, guid: e68273b0c198d91448a41b435a3c108e, type: 3}
+      propertyPath: OnFloor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 106797061939612187, guid: e68273b0c198d91448a41b435a3c108e, type: 3}
+      propertyPath: canWalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 106797061939612187, guid: e68273b0c198d91448a41b435a3c108e, type: 3}
+      propertyPath: infinityJump
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1865825495398040564, guid: e68273b0c198d91448a41b435a3c108e, type: 3}
       propertyPath: m_Size.y
