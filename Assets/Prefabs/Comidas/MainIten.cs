@@ -30,4 +30,12 @@ public class MainIten : MonoBehaviour
     }
 
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
 }
