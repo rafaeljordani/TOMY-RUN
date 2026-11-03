@@ -1,11 +1,14 @@
 using JetBrains.Annotations;
+using TMPro;
 using UnityEngine;
 
 public class ControlerDeleteAndADD : MonoBehaviour
 {
     public GameObject player, prefabLinha,linha;
+    public int Y;   
     public Vector3 limiteQueda;
     public int linhasSpawnadas = 1;
+    public TextMeshProUGUI textTempo;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,6 +18,8 @@ public class ControlerDeleteAndADD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SetAlturaY();
+        SetString();
 
     }
 
@@ -40,6 +45,20 @@ public class ControlerDeleteAndADD : MonoBehaviour
     {
         Vector3 spawnLinha = limiteQueda;
         linha = Instantiate(prefabLinha, spawnLinha, Quaternion.identity);
-        
+    }
+
+    public void SetAlturaY() {
+        if(gameObject.transform.position.y < Y)
+        {
+        }
+        else
+        { 
+            Y = ((int)gameObject.transform.position.y); 
+        }
+    }
+   
+    public void SetString()
+    {
+        textTempo.text = "Pontos: " + Y * 10;
     }
 }
