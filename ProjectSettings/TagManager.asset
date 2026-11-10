@@ -8,6 +8,8 @@ TagManager:
   - ItensInfinntyRunning
   - MainGameInfinntyRunning
   - NuvemInfinntyJump
+  - OpenDor
+  - ExitDoor
   layers:
   - Default
   - TransparentFX

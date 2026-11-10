@@ -1,3 +1,4 @@
+using System.Xml.Serialization;
 using UnityEngine;
 
 public class Player_Main : MonoBehaviour
@@ -24,7 +25,10 @@ public class Player_Main : MonoBehaviour
     public Animator Anim;
     public SpriteRenderer spriteRenderer;
 
-   
+    //Animação da porta
+    public Animator AnimDoor;
+
+
 
     void Update()
     {
@@ -52,19 +56,11 @@ public class Player_Main : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor"))
         {
             OnFloor = false;
-        } 
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("ItensInfinntyRunning"))
-        {
-            setAnimEat();
-            collision.gameObject.GetComponent<MainIten>().ControlerBoostAndVida();
-            //pegar a função do obejeto que colidio e chamar essa função
-            Destroy(collision.gameObject);
-        }
-
-            
+        setAnimEat(collision);
     }
 
     public void CameraMov()
@@ -143,7 +139,6 @@ public class Player_Main : MonoBehaviour
             Anim.SetBool("isJump", true);
         }
     }
-
     public void eatFront()
     {
             Anim.SetBool("isEatFront", false);
@@ -152,12 +147,19 @@ public class Player_Main : MonoBehaviour
     {
         Anim.SetBool("isEatSides", false);
     }
-
     public void setAnimEat()
     {
         Anim.SetBool("isEatFront", true);
         Anim.SetBool("isEatSides", true);
     }
-
-
+    public void setAnimEat(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("ItensInfinntyRunning"))
+        {
+            setAnimEat();
+            collision.gameObject.GetComponent<MainIten>().ControlerBoostAndVida();
+            //pegar a função do obejeto que colidio e chamar essa função
+            Destroy(collision.gameObject);
+        }
+    }
 }
