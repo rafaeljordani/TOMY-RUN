@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ChangeScene : MonoBehaviour
 {
+
+    public string Room;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,5 +22,13 @@ public class ChangeScene : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
     }
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            ChangeSceneTo(Room);
+        }
+    }
 
 }

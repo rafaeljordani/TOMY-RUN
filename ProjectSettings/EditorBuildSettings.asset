@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Hubs/Menu.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/LivingRoon/Gaming.unity
+    path: Assets/Scenes/Rooms/Home.unity
     guid: 1b1a701cfdd4547458ddea561c663a95
   - enabled: 1
     path: Assets/Scenes/Hubs/Tela de Saves.unity
@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MineGames/InfinityJump/InfinitJump.unity
     guid: 15e8c1d8388d55242b79f9abad041e91
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Bedroon/Bedroon.unity
+    guid: e990fc6701c113b4f804ee55a371a786
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
