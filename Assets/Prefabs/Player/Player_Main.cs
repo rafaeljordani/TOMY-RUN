@@ -133,7 +133,7 @@ public class Player_Main : MonoBehaviour
             Anim.SetBool("isJump", false);
             Anim.SetBool("isJumpFinished", true);
         }
-        else
+        else if(canJump)
         {
             Anim.SetBool("isJumpFinished", false);
             Anim.SetBool("isJump", true);
