@@ -31,7 +31,7 @@ public class MainGame : MonoBehaviour
         if ((estaminaController <= 0) || (vida <= 0))
         {
            
-            SceneManager.LoadScene("Gaming");
+            SceneManager.LoadScene("Home");
         }
     }
 }

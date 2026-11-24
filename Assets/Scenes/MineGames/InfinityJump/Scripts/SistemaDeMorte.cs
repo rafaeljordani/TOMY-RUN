@@ -21,7 +21,7 @@ public class SistemaDeMorte : MonoBehaviour
         {
             Debug.Log("Player morreu");
             Destroy(collision.gameObject);
-            SceneManager.LoadScene("Gaming");
+            SceneManager.LoadScene("Home");
         }   
     }
 }
